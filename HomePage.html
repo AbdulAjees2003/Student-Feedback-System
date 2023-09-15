@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <!-- <link rel="stylesheet" type="text/css" href="HomePage.css"> -->
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .main{
+            width: 100%;
+            background-color: #fff;
+            background-position: center;
+            background-size: cover;
+        }
+        .content{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .clgname{
+            display: flex;
+            justify-content: center;
+        }
+        .clgname img{
+            margin-top: 10px;
+            width: 300px;
+            height: 250px;
+        }
+        .clgname h1{
+            font-family:sans-serif;
+            text-align: center;
+            font-size: 70px;
+        }
+        .position{
+            text-align: center;
+            font-size: 50px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .admin{
+            float: left;
+            margin-left: 400px;
+        }
+        .admin img{
+            margin-left: 100px;
+            margin-top: 20px;
+            display: flex;
+            width: 345px;
+            height: 345px;
+        }
+        .admin button{
+            margin-top: 1px;
+            margin-left: 185px;
+            width: 160px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(53, 124, 255);
+            border: none;
+        }
+        .admin button a{
+            text-decoration: none;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .admin button:hover{
+            background-color: rgb(0, 255, 21);
+        }
+        .student{
+            float:right;
+        }
+        .student img{
+            width: 325px;
+            height: 325px;
+            display: flex;
+            margin-right: 500px;
+            margin-top: 30px;
+        }
+        .student button{
+            margin-top: 10px;
+            margin-left: 85px;
+            width: 160px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(53, 124, 255);
+            border: none;
+        }
+        .student button a{
+            text-decoration: none;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .student button:hover{
+            background-color: rgb(0, 255, 21);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="content">
+            <div class="clgname">
+                <img src="Clg Logo.png">
+                <h1>Sri Balaji Arts And Science <br> College</h1>
+            </div>
+                <h2 class="position">Select Your Position</h2>
+                <div class="admin">
+                    <img src="Admin.png" alt="Image Not Available">
+                    <button><a href="Admin Login.html">ADMIN</a></button>
+                </div>
+                <div class="student">
+                    <img src="Student.png" alt="Image Not Available">
+                    <button><a href="Student.html">STUDENT</a></button>
+                </div>
+        </div>
+    </div>
+</body>
+</html>

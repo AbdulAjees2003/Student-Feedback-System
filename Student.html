@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            background-position: center;
+            display: flex;
+            background-color: rgb(53, 124, 255);
+        }
+        .main{
+            position: relative;
+            margin-top: 20px;
+            width: 1000px;
+            background-color: #fff;
+            height: 2000px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        }
+        .main .form{
+            padding: 30px;
+            text-align: center;
+        }
+        .form h1{
+            font-size: 40px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .input{
+            margin: 10px 0;
+        }
+        .input label{
+            font-family: 'Times New Roman';
+            font-size: 20px;
+            font-weight: bold;
+        }
+        select{
+            width:100%;
+            padding: 12px 20px;
+            margin:10px 0;
+            display: inline-block;
+            border: 2px solid black;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            box-sizing: border-box;
+        }
+        .input option{
+            font-size: 18px;
+            text-align: center;
+        }
+        .form .question{
+            margin-top: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .question{
+            width: 100%;
+            background-color: rgb(248, 239, 156);
+            border-radius: 10px;
+        }
+        .question p{
+            font-weight: bold;
+            font-size: 30px;
+            font-family: sans-serif;
+        }
+        .answer input{
+            margin-left: 20px;
+        }
+        .answer label{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 25px;
+        }
+        .feedback{
+            margin-top: 30px;
+        }
+        .feedback textarea{
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            resize: none;
+            font-size: 20px;
+            text-align: center;
+        }
+        .form .inputbtn{
+            margin-top: 30px;
+        }
+        .inputbtn button{
+            width: 50%;
+            height: 50px;
+            border: none;
+            border-radius: 10px;
+            background-color: rgb(53, 124, 255);
+            color: black;
+            font-family: monospace;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .inputbtn button:hover{
+            background-color: rgb(0, 255, 21);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="form">
+            <h1>Student FeedBack Form</h1>
+            <form action="">
+                <div class="input">
+                    <label for="classname">Select Your Class:</label>
+                    <select id="classname">
+                        <option value="1st BSC Computer Science">1st BSC Computer Science</option>
+                        <option value="2nd BSC Computer Science">2nd BSC Computer Science</option>
+                        <option value="3rd BSC Computer Science">3rd BSC Computer Science</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <label for="staff">Select The Staff:</label>
+                    <select id="staff">
+                        <option value="M.Shanthi">M.Shanthi</option>
+                        <option value="S.Dharani">S.Dharani</option>
+                        <option value="M.Karthick">M.Karthick</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <label for="subject">Select The Subject:</label>
+                    <select id="subject">
+                        <option value="Data Science">Data Science</option>
+                        <option value="Software Engineering">Software Engineering</option>
+                        <option value="Cloud Computing">Cloud Computing</option>
+                        <option value="Mobile Computing">Mobile Computing</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <p>1.Command On Language?</p> <br>
+                    <div class="answer">
+                        <input type="radio" name="q1" id="q1op1">
+                        <label for="q1">Bad</label>
+                        <input type="radio" name="q1" id="q1op2">
+                        <label for="q1">Fair</label>
+                        <input type="radio" name="q1" id="q1op3">
+                        <label for="q1">Good</label>
+                        <input type="radio" name="q1" id="q1op4">
+                        <label for="q1">Very Good</label>
+                        <input type="radio" name="q1" id="q1op5">
+                        <label for="q1">Excellent</label>
+                    </div>
+                </div>
+                <div class="question">
+                    <p>2.Class Control?</p> <br>
+                    <div class="answer">
+                        <input type="radio" name="q2" id="q2op1">
+                        <label for="q2">Bad</label>
+                        <input type="radio" name="q2" id="q2op2">
+                        <label for="q2">Fair</label>
+                        <input type="radio" name="q2" id="q2op3">
+                        <label for="q2">Good</label>
+                        <input type="radio" name="q2" id="q2op4">
+                        <label for="q2">Very Good</label>
+                        <input type="radio" name="q2" id="q2op5">
+                        <label for="q2">Excellent</label>
+                    </div>
+                </div>
+                <div class="question">
+                    <p>3.General Knowledge?</p> <br>
+                    <div class="answer">
+                        <input type="radio" name="q3" id="q3op1">
+                        <label for="q3">Bad</label>
+                        <input type="radio" name="q3" id="q3op2">
+                        <label for="q3">Fair</label>
+                        <input type="radio" name="q3" id="q3op3">
+                        <label for="q3">Good</label>
+                        <input type="radio" name="q3" id="q3op4">
+                        <label for="q3">Very Good</label>
+                        <input type="radio" name="q3" id="q3op5">
+                        <label for="q3">Excellent</label>
+                    </div>
+                </div>
+                <div class="question">
+                    <p>4.Behaviour With Students?</p> <br>
+                    <div class="answer">
+                        <input type="radio" name="q4" id="q4op1">
+                        <label for="q4">Bad</label>
+                        <input type="radio" name="q4" id="q4op2">
+                        <label for="q4">Fair</label>
+                        <input type="radio" name="q4" id="q4op3">
+                        <label for="q4">Good</label>
+                        <input type="radio" name="q4" id="q4op4">
+                        <label for="q4">Very Good</label>
+                        <input type="radio" name="q4" id="q4op5">
+                        <label for="q4">Excellent</label>
+                    </div>
+                </div>
+                <div class="question">
+                    <p>5.Usefulness In Counseling Personal Difficulties Of Students?</p> <br>
+                    <div class="answer">
+                        <input type="radio" name="q5" id="q5op1">
+                        <label for="q5">Bad</label>
+                        <input type="radio" name="q5" id="q5op2">
+                        <label for="q5">Fair</label>
+                        <input type="radio" name="q5" id="q5op3">
+                        <label for="q5">Good</label>
+                        <input type="radio" name="q5" id="q5op4">
+                        <label for="q5">Very Good</label>
+                        <input type="radio" name="q5" id="q5op5">
+                        <label for="q5">Excellent</label>
+                    </div>
+                </div>
+                <div class="question">
+                    <p>6.Teachers Participation And Motivation In Extra-Curricular Activities By The Students?<p> <br>
+                        <div class="answer">
+                            <input type="radio" name="q6" id="q6op1">
+                            <label for="q6">Bad</label>
+                            <input type="radio" name="q6" id="q6op2">
+                            <label for="q6">Fair</label>
+                            <input type="radio" name="q6" id="q6op3">
+                            <label for="q6">Good</label>
+                            <input type="radio" name="q6" id="q6op4">
+                            <label for="q6">Very Good</label>
+                            <input type="radio" name="q6" id="q6op5">
+                            <label for="q6">Excellent</label>
+                        </div>
+                </div>
+                <div class="question">
+                    <p>7.Teachers Willingness To Help Students By Conducting Extra Classes/Practicals?</p> <br>
+                    <div class="answer">
+                        <input type="radio" name="q7" id="q7op1">
+                        <label for="q7">Bad</label>
+                        <input type="radio" name="q7" id="q7op2">
+                        <label for="q7">Fair</label>
+                        <input type="radio" name="q7" id="q7op3">
+                        <label for="q7">Good</label>
+                        <input type="radio" name="q7" id="q7op4">
+                        <label for="q7">Very Good</label>
+                        <input type="radio" name="q7" id="q7op5">
+                        <label for="q7">Excellent</label>
+                    </div>
+                </div>
+                <div class="question">
+                    <p>8.Preparing Students For University Exams?</p> <br>
+                    <div class="answer">
+                        <input type="radio" name="q8" id="q8op1">
+                        <label for="q8">Bad</label>
+                        <input type="radio" name="q8" id="q8op2">
+                        <label for="q8">Fair</label>
+                        <input type="radio" name="q8" id="q8op3">
+                        <label for="q8">Good</label>
+                        <input type="radio" name="q8" id="q8op4">
+                        <label for="q8">Very Good</label>
+                        <input type="radio" name="q8" id="q8op5">
+                        <label for="q8">Excellent</label>
+                    </div>
+                </div>
+                <div class="feedback">
+                    <textarea id="additionalinfo" placeholder="Enter Your Feedback"></textarea>
+                </div>
+                <div class="inputbtn">
+                    <button type="submit" onclick="feedback()" id="inputbtn">submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function feedback(){
+            var additionalinfo=document.getElementById("additionalinfo").value;
+            var classname=document.getElementById("classname");
+            var staff=document.getElementById("staff");
+            var subject=document.getElementById("subject");
+       
+            var q1op2=document.getElementById("q1op1").checked;
+            var q1op2=document.getElementById("q1op2").checked;
+            var q1op3=document.getElementById("q1op3").checked;
+            var q1op4=document.getElementById("q1op4").checked;
+            var q1op5=document.getElementById("q1op5").checked;
+
+
+            var q2op1=document.getElementById("q2op1").checked;
+            var q2op2=document.getElementById("q2op2").checked;
+            var q2op3=document.getElementById("q2op3").checked;
+            var q2op4=document.getElementById("q2op4").checked;
+            var q2op5=document.getElementById("q2op5").checked;
+
+
+            var q3op1=document.getElementById("q3op1").checked;
+            var q3op2=document.getElementById("q3op2").checked;
+            var q3op3=document.getElementById("q3op3").checked;
+            var q3op4=document.getElementById("q3op4").checked;
+            var q3op5=document.getElementById("q3op5").checked;
+
+
+            var q4op1=document.getElementById("q4op1").checked;
+            var q4op2=document.getElementById("q4op2").checked;
+            var q4op3=document.getElementById("q4op3").checked;
+            var q4op4=document.getElementById("q4op4").checked;
+            var q4op5=document.getElementById("q4op5").checked;
+
+
+            var q5op1=document.getElementById("q5op1").checked;
+            var q5op2=document.getElementById("q5op2").checked;
+            var q5op3=document.getElementById("q5op3").checked;
+            var q5op4=document.getElementById("q5op4").checked;
+            var q5op5=document.getElementById("q5op5").checked;
+
+
+            var q6op1=document.getElementById("q6op1").checked;
+            var q6op2=document.getElementById("q6op2").checked;
+            var q6op3=document.getElementById("q6op3").checked;
+            var q6op4=document.getElementById("q6op4").checked;
+            var q6op5=document.getElementById("q6op5").checked;
+
+
+            var q7op1=document.getElementById("q7op1").checked;
+            var q7op2=document.getElementById("q7op2").checked;
+            var q7op3=document.getElementById("q7op3").checked;
+            var q7op4=document.getElementById("q7op4").checked;
+            var q7op5=document.getElementById("q7op5").checked;
+
+
+            var q8op1=document.getElementById("q8op1").checked;
+            var q8op2=document.getElementById("q8op2").checked;
+            var q8op3=document.getElementById("q8op3").checked;
+            var q8op4=document.getElementById("q8op4").checked;
+            var q8op5=document.getElementById("q8op5").checked;
+            
+            if(q1op1==""&&q1op2==""&&q1op3==""&&q1op4==""&&q1op5==""){
+                alert("Choose Any One Option");
+            }
+            else if(q2op1=="" && q2op2=="" && q2op3=="" && q2op4=="" && q2op5==""){
+                alert("Choose Any One Option");
+            }
+            else if(q3op1=="" && q3op2=="" && q3op3=="" && q3op4=="" && q3op5==""){
+                alert("Choose Any One Option");
+            }
+            else if(q4op1=="" && q4op2=="" && q4op3=="" && q4op4=="" && q4op5==""){
+                alert("Choose Any One Option");
+            }
+            else if(q5op1=="" && q5op2=="" && q5op3=="" && q5op4=="" && q5op5==""){
+                alert("Choose Any One Option");
+            }
+            else if(q6op1=="" && q6op2=="" && q6op3=="" && q6op4=="" && q6op5==""){
+                alert("Choose Any One Option");
+            }
+            else if(q7op1=="" && q7op2=="" && q7op3=="" && q7op4=="" && q7op5==""){
+                alert("Choose Any One Option");
+            }
+            else if(q8op1=="" && q8op2=="" && q8op3=="" && q8op4=="" && q8op5==""){
+                alert("Choose Any One Option");
+            }
+            else if(additionalinfo==""){
+                alert("Please Give Additional Information...");
+            }
+            else{
+                alert("Feedback Submitted Successfully")
+            }
+        }
+    </script>
+</body>
+</html>
